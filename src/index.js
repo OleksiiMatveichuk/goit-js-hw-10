@@ -32,7 +32,7 @@ function nameFilter(arr) {
         acc +
         `<li>
         <img src="${el.flags.svg}" width ="40">
-        <h2>${el.name.official}</h2>
+        <p>${el.name.official}</p>
     </li>`,
       ''
     );
@@ -43,11 +43,11 @@ function nameFilter(arr) {
       (acc, el) =>
         acc +
         `<li>
-        <img src="${el.flags.svg}" width ="40">
+        <img src="${el.flags.svg}" width ="320">
         <h2>${el.name.official}</h2>
         <h3>Capital: ${el.capital}</h3>
         <h3>Population: ${el.population}</h3>
-        <h3>Languages: ${el.languages}</h3>
+        <h3>Languages: ${Object.values(el.languages)}</h3>
     </li>`,
       ''
     );
