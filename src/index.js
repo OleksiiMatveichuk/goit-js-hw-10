@@ -10,6 +10,7 @@ const list = document.querySelector('.country-list');
 const inputCountries = evt => {
   const country = evt.target.value.trim();
   if (!country) {
+    list.innerHTML = '';
     return;
   }
   fetchCountries(country)
